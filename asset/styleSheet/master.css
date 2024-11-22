@@ -1,0 +1,76 @@
+*{padding: 0;margin: 0;box-sizing: border-box;}
+body{background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);}
+div{
+    display: flex;
+    justify-content: center;
+    >#search{
+        margin-top: 50px;
+        border-radius: 5px;
+        padding: 10px;}}
+#list{
+    width: 600px;
+    margin: 80px auto;
+    border: 1px solid rgb(26, 26, 26);
+    border-radius: 20px;
+    list-style-type: none;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.488);
+    >li{
+        width: 100%;
+        height: 100%;
+        border-bottom: 1px solid rgba(26, 26, 26, 0.375);
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        align-items: center;
+        >span{width: 150px;}
+        >img{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover; }}}
+.me {
+    width: 150px;
+    height: 150px;
+    position: fixed;
+    bottom: 40px;
+    right: 5px;
+    z-index: 1001;
+    >div {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: red;
+        &:first-of-type {
+            border-radius: 49% 51% 46% 54% / 74% 77% 23% 26%;
+            background-color: #65425f;
+            animation: anime2 infinite alternate 2s;}
+        &:last-of-type {
+            background-image: url(../img/zahra.jpg);
+            background-size: cover;
+            border-radius: 49% 51% 46% 54% / 37% 31% 69% 63%;
+            animation: anime1 infinite alternate 2s;} }
+    &:hover {
+        >a {
+            left: -30px;
+            opacity: 1;
+            &:nth-of-type(2) {left: -70px;}
+            &:nth-of-type(3) { left: -70px;}
+            &:nth-of-type(4) {left: -30px;}}}
+    >a {
+        position: absolute;
+        left: 30px;
+        text-decoration: none;
+        font-size: 30px;
+        transition: 1s;
+        color: rgb(0, 0, 0);
+        opacity: 0;
+        &:first-of-type {top: 0;}
+        &:nth-of-type(2) { top: 40px;}
+        &:nth-of-type(3) {top: 90px;}
+       &:nth-of-type(4) {top: 140px;}}}
+@keyframes anime1 {
+to {border-radius: 49% 51% 48% 52% / 46% 46% 54% 54%;}}
+@keyframes anime2 {
+to {border-radius: 70% 30% 44% 56% / 46% 34% 66% 54%;}}
